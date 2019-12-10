@@ -25,7 +25,7 @@ function RelogioRegressivo() {
   const mesEvent = 12
   const diaEvent = 9
   const horaEvent = 23
-  const minutoEvent = 35
+  const minutoEvent = 59
 
   let ano = data.getFullYear()
   let mes = data.getMonth()
