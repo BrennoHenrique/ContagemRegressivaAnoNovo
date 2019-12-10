@@ -44,7 +44,7 @@ function RelogioRegressivo() {
     horaAux = horaEvent - hora
   }
   if (diaAux == 0 && horaAux == 0) {
-    minutoAux = (minutoEvent - minuto) - 1
+    minutoAux = (minutoEvent - minuto)
   }
 
   if (mesAux >= 0 && diaAux >= 0 && anoAux >= 0 && horaAux >= 0 && minutoAux >= 0) {
@@ -55,7 +55,7 @@ function RelogioRegressivo() {
       hora = 23 - hora
     }
     if (diaAux == 0 && horaAux == 0) {
-      minuto = (minutoEvent - minuto) - 1
+      minuto = (minutoEvent - minuto)
     } else {
       minuto = 59 - minuto
     }
