@@ -9,8 +9,8 @@
 }
 
 body {
+  padding: 0px;
   background: 100%;
-  background-size: cover;
   background-color: black;
 }
 
@@ -36,6 +36,7 @@ section {
   background-color: rgb(255, 255, 255);
   width: 550px;
   height: 450px;
+  margin: auto;
 }
 
 #div2 {
@@ -95,6 +96,7 @@ section {
 }
 
 #marca {
+  margin-top: 70px;
   color: white;
 }
 

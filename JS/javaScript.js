@@ -1,8 +1,7 @@
-const paragrafoElement = document.getElementById('paragrafo')
+﻿const paragrafoElement = document.getElementById('paragrafo')
 const contDiasElement = document.getElementById('contDias')
 const relogioElement = document.getElementById('relogio')
 const corpoElement = document.querySelector('body.corpo')
-const tituloElement = document.getElementById('titulo')
 const tempoElement = document.getElementById('tempo')
 const marcaElement = document.getElementById('marca')
 const diasElement = document.getElementById('dias')
@@ -16,14 +15,16 @@ const div4 = document.getElementById('div4')
 relogioElement.addEventListener('mouseenter', Enter)
 relogioElement.addEventListener('mouseout', Out)
 
-corpoElement.style.background = 'url(../imagem/fundo1.jpg) no-repeat center center fixed'
+corpoElement.style.background = 'url(./imagem/fundo1.jpg) no-repeat center center fixed'
+corpoElement.style.backgroundColor = 'black'
+corpoElement.style.backgroundSize = '100%'
 
 function RelogioRegressivo() {
   const data = new Date()
 
   const anoEvent = 2019
   const mesEvent = 12
-  const diaEvent = 9
+  const diaEvent = 31
   const horaEvent = 23
   const minutoEvent = 59
 
@@ -74,19 +75,15 @@ function RelogioRegressivo() {
       segundo = "0" + segundo
     }
 
-    tituloElement.innerHTML = 'Contagem...'
-
     if (dia == 0 && hora == 0 && minuto == 0 && segundo <= 10) {
       paragrafoElement.style.color = RandomColor()
       div1.style.backgroundColor = RandomColor()
       div2.style.backgroundColor = RandomColor()
       div3.style.backgroundColor = RandomColor()
       div4.style.backgroundColor = RandomColor()
-      tituloElement.style.color = RandomColor()
 
       relogioElement.removeEventListener('mouseenter', Enter)
 
-      corpoElement.style.backgroundColor = 'white'
       paragrafoElement.style.marginTop = '80px'
 
       infoElement.innerHTML = ''
@@ -118,7 +115,6 @@ function RelogioRegressivo() {
     div3.style.height = '0px'
     div4.style.height = '0px'
 
-    tituloElement.innerHTML = ''
     paragrafoElement.innerHTML = ''
     contDiasElement.innerHTML = ''
     diasElement.innerHTML = ''
@@ -128,9 +124,9 @@ function RelogioRegressivo() {
     relogioElement.style.width = '210px'
     relogioElement.style.height = '250px'
 
-    corpoElement.style.width = '100%'
-    corpoElement.style.height = '100%'
-    corpoElement.style.background = 'url(../imagem/fundo2.jpg) no-repeat center center fixed'
+    corpoElement.style.background = 'url(./imagem/fundo2.jpg) no-repeat center center fixed'
+    corpoElement.style.backgroundColor = 'black'
+    corpoElement.style.backgroundSize = '100%'
 
     relogioElement.removeEventListener('mouseenter', Enter)
     relogioElement.removeEventListener('mouseout', Out)
@@ -158,7 +154,6 @@ function RandomColor() {
 
 function Fim() {
   relogioElement.style.borderColor = RandomColor()
-  tituloElement.style.color = RandomColor()
   tempoElement.style.color = RandomColor()
 
   setTimeout(Fim, 1000)
